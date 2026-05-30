@@ -118,7 +118,7 @@ export const getTopRatedSeries = async () => {
 export const getMovieDetails = async (id) => {
   try {
     const res = await api.get(`/movie/${id}`, {
-      params: { append_to_response: 'credits,similar' },
+      params: { append_to_response: 'credits,similar,videos' },
     });
     return res.data;
   } catch (error) {
@@ -141,7 +141,7 @@ export const getMovieDetails = async (id) => {
 export const getSeriesDetails = async (id) => {
   try {
     const res = await api.get(`/tv/${id}`, {
-      params: { append_to_response: 'credits,similar' },
+      params: { append_to_response: 'credits,similar,videos' },
     });
     return res.data;
   } catch (error) {
